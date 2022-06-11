@@ -1,0 +1,37 @@
+Next.js×microCMSで自作ホームページを無料で公開しよう!! [with TailwindCSS]
+https://hpfull.jp/blogs/dquirjn12z8
+
+１．サイトを作成
+	npx create-next-app nextjs-microcms
+	npm run dev			http://localhost:3000/
+
+２．terminalにて、
+	git init			「.git」フォルダーが作られる。ステージングエリアやローカルリポジトリが作成
+	git add .			ワークツリーからステージングエリアへとファイルを上げます
+	git commit -m "first commit"	 -m "message" とすることでエディタを起動せずにメッセージを残す
+
+３．ブラウザにて
+	new Repository name：neBlog
+	次をこぴー：https://github.com/kfbk/neBlog.git
+
+４．Terminalにて
+	git remote add origin https://github.com/kfbk/neBlog.git
+ 	git push -u origin main
+
+５．github確認
+	https://github.com/kfbk/neBlog.git
+
+６．Sourcetree
+	create Repository
+
+７．Vercel Deploy
+	既に登録しているので、VercelHomeへアクセス。neBlogを選択し、ほとんど設定せずに完成した。
+	URL：https://ne-blog.vercel.app/
+
+８．TailwindCSSの導入
+	npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+	npx tailwindcss init -p
+
+９．microCMSとリンク
+	.env.local 作成
+	npm install --save microcms-js-sdk
